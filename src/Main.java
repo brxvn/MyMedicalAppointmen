@@ -1,18 +1,21 @@
-import static ui.UImenu.*;
+import static ui.UImenu.showMenu;
 
 public class Main {
     public static void main(String[] args) {
+        //showMenu();
+        Doctor myDoctor = new Doctor("Bryan", "General");
+        //System.out.println("\n" + myDoctor.name);
+        //System.out.println(myDoctor.speciality);
 
-        Doctor myDoctor = new Doctor();
-        myDoctor.name = "Horacio Quiroga";
-        myDoctor.showName();
-        myDoctor.showID();
+        Patient patient = new Patient("Bryan Gonzalez", "bryan@mail.com");
+        patient.setHeight(1.75);
+        patient.setWeight(75);
+        patient.setPhoneNumber("1234567890");
 
-        Doctor myDoctor2 = new Doctor();
-        myDoctor2.name = "Bryan Gonzalez";
-        myDoctor2.showName();
-        myDoctor2.showID();
-
-        showMenu();
+        System.out.println();
+        System.out.println(patient.getName());
+        System.out.println(patient.getHeight());
+        System.out.println(patient.getWeight());
+        System.out.println(patient.getPhoneNumber());
     }
 }
