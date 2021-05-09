@@ -1,21 +1,17 @@
-import static ui.UImenu.showMenu;
+import model.Doctor;
+import model.Patient;
+
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
         //showMenu();
         Doctor myDoctor = new Doctor("Bryan", "General");
-        //System.out.println("\n" + myDoctor.name);
-        //System.out.println(myDoctor.speciality);
+        myDoctor.addAvailableAppointment(new Date(), "4pm");
 
         Patient patient = new Patient("Bryan Gonzalez", "bryan@mail.com");
-        patient.setHeight(1.75);
-        patient.setWeight(75);
-        patient.setPhoneNumber("1234567890");
+        System.out.println(patient);
+        System.out.println(myDoctor);
 
-        System.out.println();
-        System.out.println(patient.getName());
-        System.out.println(patient.getHeight());
-        System.out.println(patient.getWeight());
-        System.out.println(patient.getPhoneNumber());
     }
 }
